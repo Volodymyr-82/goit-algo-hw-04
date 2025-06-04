@@ -19,7 +19,7 @@ def total_salary(path):
            quantity+=1
            average = total / quantity  
          except ValueError:
-            print(f" Неправильний формат рядка: {el}, або файл пустий")
+            print(f" Неправильний формат рядка: {el}")
          if quantity==0:
           print("У файлі {fh_name} не має жодного коректного радка ")
           return None
@@ -28,6 +28,6 @@ def total_salary(path):
    except FileNotFoundError:   
      print(f"Файл '{fh_name}' - не існує, або  шлях '{fh_parent}' - не вірний")    
      return None
-path='D:\Morhun_Volodymyr\Mashine_learning\data_project\goit-algo-hw-03\salary.txt'
+path='salary.txt'
 
 total_salary(path)
