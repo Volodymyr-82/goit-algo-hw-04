@@ -9,7 +9,7 @@ def visualization_structure_directory(path):
     i=0
     for path in directory.iterdir():
         #for color in colors:
-       print(colors[i] + f"📁 {path}/" + Style.DIM)
+       print(colors[i] + "└── " +f"📁 {path}/" + Style.DIM)
        i+=1
     return path
 
