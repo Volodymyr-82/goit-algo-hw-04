@@ -15,9 +15,12 @@ def total_salary(path):
       for el in lines:
          try:
            name, salary = el.split(',')
-           total+=int(salary)
+           total+=float(salary)
            quantity+=1
-           average = total / quantity  
+           try:
+             average = total / quantity
+           except ZeroDivisionError:
+            print(f"{quantity}=0")
          except ValueError:
             print(f" Неправильний формат рядка: {el}")
          if quantity==0:
