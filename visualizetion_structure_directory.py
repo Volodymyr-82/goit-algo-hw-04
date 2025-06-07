@@ -23,4 +23,12 @@ def visualization_structure(path):
 
 
 
-visualization_structure(r"D:\Morhun_Volodymyr\Mashine_learning\data_project")
+#visualization_structure(r"D:\Morhun_Volodymyr\Mashine_learning\data_project")
+if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print(Fore.RED + "⚠️  Вкажи шлях до директорії як аргумент.")
+        print(Fore.YELLOW + "📌 Приклад: python visualizetion_structure_directory.py D:\\MyFolder")
+    else:
+        start_path = sys.argv[1]
+        print(Fore.CYAN + f"\n📂 Структура директорії: {start_path}\n")
+        visualization_structure(start_path)
